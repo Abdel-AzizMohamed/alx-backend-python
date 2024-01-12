@@ -11,8 +11,3 @@ def multiple(num: float) -> float:
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Gives the sum of a list of floats and integers"""
     return multiple
-
-
-print(make_multiplier.__annotations__)
-fun = make_multiplier(2.22)
-print("{}".format(fun(2.22)))
