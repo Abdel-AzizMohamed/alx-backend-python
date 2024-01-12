@@ -6,8 +6,8 @@ T = TypeVar("T")
 
 
 def safely_get_value(
-    dct: Mapping, key: str, default: None = Union[Any, T]
-) -> Union[Any, T]:
+    dct: Mapping, key: Any, default: None = Union[T, None]
+) -> Union[T, Any]:
     """Return the given key if its exists else return the default value"""
     if key in dct:
         return dct[key]
