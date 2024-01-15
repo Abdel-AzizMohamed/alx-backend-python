@@ -22,4 +22,4 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
     )
 
-    return tasks
+    return sorted(tasks)
